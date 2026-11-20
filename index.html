@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Saare Ehituspuidu sisevoodrilaudade hinnavõrdlus 100 m² pinna katmiseks.">
+  <title>Sisevoodrilaudade hinnavõrdlus | 100 m²</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #24332c; --muted: #64736b; --line: #e2e9e4;
+      --green: #315b46; --pale: #f2f6f2; --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #f7f8f6; color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    main { width: min(1120px, calc(100% - 32px)); margin: 44px auto; }
+    header { margin-bottom: 28px; }
+    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 8px 0; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; letter-spacing: -.04em; }
+    .intro { max-width: 720px; color: var(--muted); }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 26px 0; }
+    .stat { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+    .stat span { display: block; color: var(--muted); font-size: .85rem; }
+    .stat strong { display: block; margin-top: 4px; font-size: 1.55rem; }
+    .panel { background: var(--white); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 16px; }
+    input { width: min(100%, 340px); padding: 11px 13px; border: 1px solid #ccd8cf; border-radius: 9px; font: inherit; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; white-space: nowrap; }
+    th, td { padding: 13px 15px; text-align: left; border-top: 1px solid var(--line); }
+    th { background: var(--pale); color: #43574b; font-size: .8rem; }
+    td { font-size: .92rem; }
+    tbody tr:hover { background: #f8fbf8; }
+    .price { text-align: right; font-variant-numeric: tabular-nums; }
+    th.price { text-align: right; }
+    .notes { margin: 22px 2px; color: var(--muted); font-size: .9rem; }
+    a { color: var(--green); }
+    footer { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    @media (max-width: 600px) { main { margin: 28px auto; } .toolbar { align-items: stretch; } input { width: 100%; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Hinnavõrdlus · sisevoodrilaud</div>
+    <h1>Sisevoodrilauad<br>100 m² pinnale</h1>
+    <p class="intro">Saare Ehituspuidu kodulehel kuvatud sisevoodrilaudade hinnad. Võrdluses on nii 100 m² vajadus kui ka 10% varuga arvestatud kogus.</p>
+  </header>
+
+  <section class="summary" aria-label="Arvestuse kokkuvõte">
+    <div class="stat"><span>Kaetav pind</span><strong>100 m²</strong></div>
+    <div class="stat"><span>Soovituslik kogus 10% varuga</span><strong>110 m²</strong></div>
+    <div class="stat"><span>Võrdluses tooteid</span><strong>18</strong></div>
+  </section>
+
+  <section class="panel">
+    <div class="toolbar">
+      <strong>Toodete hinnavõrdlus</strong>
+      <input id="search" type="search" placeholder="Otsi toodet, mõõtu või materjali…" aria-label="Otsi tabelist">
+    </div>
+    <div class="table-wrap">
+      <table id="prices">
+        <thead><tr>
+          <th>Toode</th><th>Mõõt</th><th>Sort / materjal</th><th>Pikkused</th>
+          <th class="price">€/m² (KM-ga)</th><th class="price">100 m²</th><th class="price">110 m²</th>
+        </tr></thead>
+        <tbody><tr><td>STF0 12×120 C ku</td><td>12×120 mm</td><td>C, kuusk</td><td>3,0–5,4 m</td><td class="price">6.20 €</td><td class="price">620.00 €</td><td class="price">682.00 €</td></tr>
+<tr><td>STP-J 12×120 C MÄ</td><td>12×120 mm</td><td>C, mänd</td><td>3,9 m</td><td class="price">6.76 €</td><td class="price">676.00 €</td><td class="price">743.60 €</td></tr>
+<tr><td>STP-J 12×96 C ku</td><td>12×96 mm</td><td>C</td><td>3,9 m</td><td class="price">7.29 €</td><td class="price">729.00 €</td><td class="price">801.90 €</td></tr>
+<tr><td>TGV-J 12×95 C mä</td><td>12×95 mm</td><td>C, mänd</td><td>3,6 m</td><td class="price">7.29 €</td><td class="price">729.00 €</td><td class="price">801.90 €</td></tr>
+<tr><td>STP0 14×121 BC KU</td><td>14×121 mm</td><td>BC, kuusk</td><td>3,6–5,4 m</td><td class="price">7.33 €</td><td class="price">733.00 €</td><td class="price">806.30 €</td></tr>
+<tr><td>TGV 14×146 BC mänd</td><td>14×146 mm</td><td>BC, mänd</td><td>3,3–5,4 m</td><td class="price">8.59 €</td><td class="price">859.00 €</td><td class="price">944.90 €</td></tr>
+<tr><td>TGV 9×95 AB mä</td><td>9×95 mm</td><td>AB, mänd</td><td>3,3–4,2 m</td><td class="price">10.22 €</td><td class="price">1022.00 €</td><td class="price">1124.20 €</td></tr>
+<tr><td>TGV 12×120 AB mä</td><td>12×120 mm</td><td>AB, mänd</td><td>3,0–5,1 m</td><td class="price">11.84 €</td><td class="price">1184.00 €</td><td class="price">1302.40 €</td></tr>
+<tr><td>STV 12×120 AB ku</td><td>12×120 mm</td><td>AB, kuusk</td><td>3,0–5,1 m</td><td class="price">12.40 €</td><td class="price">1240.00 €</td><td class="price">1364.00 €</td></tr>
+<tr><td>STV 12×120 AB mä</td><td>12×120 mm</td><td>AB, mänd</td><td>3,0–5,1 m</td><td class="price">12.40 €</td><td class="price">1240.00 €</td><td class="price">1364.00 €</td></tr>
+<tr><td>STM 12×120 AB mä</td><td>12×120 mm</td><td>AB, mänd</td><td>3,3–5,4 m</td><td class="price">12.40 €</td><td class="price">1240.00 €</td><td class="price">1364.00 €</td></tr>
+<tr><td>STP-J 12×120 AB ku</td><td>12×120 mm</td><td>AB, kuusk</td><td>3,6 m; 6,0 m</td><td class="price">12.96 €</td><td class="price">1296.00 €</td><td class="price">1425.60 €</td></tr>
+<tr><td>TGV 12×120 Ku, A-B</td><td>12×120 mm</td><td>A-B, kuusk</td><td>3,0–5,1 m</td><td class="price">12.96 €</td><td class="price">1296.00 €</td><td class="price">1425.60 €</td></tr>
+<tr><td>STS 12×120 AB mä</td><td>12×120 mm</td><td>AB, mänd</td><td>3,6–5,4 m</td><td class="price">12.96 €</td><td class="price">1296.00 €</td><td class="price">1425.60 €</td></tr>
+<tr><td>TGV 11×96 AB ku</td><td>11×96 mm</td><td>AB, kuusk</td><td>4,8–5,1 m</td><td class="price">13.13 €</td><td class="price">1313.00 €</td><td class="price">1444.30 €</td></tr>
+<tr><td>STF0 12×120 AB KU</td><td>12×120 mm</td><td>AB, kuusk</td><td>3,0–5,1 m</td><td class="price">14.09 €</td><td class="price">1409.00 €</td><td class="price">1549.90 €</td></tr>
+<tr><td>STP0 14×121 AB ku</td><td>14×121 mm</td><td>AB, kuusk</td><td>3,0–5,4 m</td><td class="price">17.47 €</td><td class="price">1747.00 €</td><td class="price">1921.70 €</td></tr>
+<tr><td>STP0 14×121 lakitud kuma AB</td><td>14×121 mm</td><td>AB, lakitud</td><td>3,6–5,7 m</td><td class="price">23.67 €</td><td class="price">2367.00 €</td><td class="price">2603.70 €</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="notes">
+    <p><strong>Arvestuse märkus:</strong> kogumaksumused on arvutatud veebilehel näidatud ruutmeetrihinna alusel. Need on hinnangulised materjalikulud ega sisalda transporti, paigaldust ega võimalikke lisakulusid.</p>
+    <p>Tegelik vajalik kogus sõltub laudade kasulikust katvast laiusest, ruumi mõõtudest, paigaldussuunast ja saadaolevatest pikkustest. Enne tellimist kontrolli müüjalt kehtivat hinda ja laoseisu.</p>
+    <p><strong>Allikas:</strong> <a href="https://ehituspuit.ee/product-category/voodrilauad/sisevoodrilaud/" target="_blank" rel="noopener noreferrer">Saare Ehituspuit – sisevoodrilaud</a></p>
+  </div>
+
+  <footer>Koostatud hinnavõrdlusena · Hinnad võivad muutuda. Fail on iseseisev HTML ja ei vaja töötamiseks eraldi teeke.</footer>
+</main>
+<script>
+  const search = document.getElementById('search');
+  const rows = [...document.querySelectorAll('#prices tbody tr')];
+  search.addEventListener('input', () => {
+    const term = search.value.trim().toLocaleLowerCase('et');
+    rows.forEach(row => {
+      row.hidden = !row.textContent.toLocaleLowerCase('et').includes(term);
+    });
+  });
+</script>
+</body>
+</html>
